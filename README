@@ -1,27 +1,29 @@
-Steam web API for node
+node-steam
+====================
 
-This documentation needs work. For now read the source code. :/
+[Steam Web API](http://steamcommunity.com/dev) for node
 
-var steam = require('steam').createClient('yoursteamAPIkey');
+This documentation needs work. For now read the source code :/
 
-steam.getPlayerItems({}, console.log); //Returns a JSON object of Robin Walker's TF2 Backpack.
+A [Steam API Key]() is needed to use this module.
 
-steam.getPlayerItems({gameid: 540,
-                      steamid: 'A 64 bit steam Id here',
-                      format: 'xml'
-                    }, console.log); //Returns a raw string of the XML data requested for TF2 Beta
+  var steam = require('node-steam').createClient('yourSteamAPIKey');
+  steam.getPlayerItems(console.log); //Returns a JSON object of Robin Walker's TF2 Backpack
 
-Supported methods:
-  getPlayerItems
-  getSchema
-  getNewsForApp
-  getGlobalAchievementPercentagesForApp
-  getPlayerSummaries
+All methods accept an optional object for parameters, and require a callback function.
 
-  methodName ([Object], [Function]);
+  steam.getPlayerItems({
+    format: 'json', // default - ['json', 'xml', 'vdf']
+    gameid: '440', // default - see valve documentation for more gameids
+    steamid: '64bitSteamId', //defaults to Robin Walker's steam id
+    version: '0001' //default
+  }, console.log);
 
-Each method is passed an object containing parameters and a callback function. If an empty object is given, the default parameters will be used.
+Supported methods
+  *getPlayerItems*
+  *getSchema*
+  *getNewsForApp*
+  *getGlobalAchievementPercentagesForApp*
+  *getPlayerSummaries*
 
-I'll add more to this documentation soon. I need to learn Markdown or something :)
-
-
+More documentation to come.
