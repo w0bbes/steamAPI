@@ -106,7 +106,7 @@
     
   };
 
-  exports.createClient = function(options, apikey) {
+  exports.configure = function(options, apikey) {
     if(arguments.length === 2) {
       steam.apikey = apikey;
       steam.settings = utils.merge(steam.defaults, options);

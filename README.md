@@ -7,7 +7,7 @@ This documentation needs work. For now read the source code :/
 
 A [Steam API Key](http://steamcommunity.com/dev/apikey) is needed to use this module.
 
-    var steam = require('node-steam').createClient('yourSteamAPIKey');
+    var steam = require('node-steam').configure('yourSteamAPIKey');
     
     //Returns a JSON object of Robin Walker's TF2 Backpack
     steam.getPlayerItems(console.log); 
@@ -24,7 +24,7 @@ All methods accept an optional object for parameters, and require a callback fun
 ### Specify Default Settings
 You can change all of the default settings when initializing the module.
 
-    var steam = require('node-steam').createClient({
+    var steam = require('node-steam').configure({
       format: 'json',
       steamid: '76561197960435530',
       steamids: ['76561197960435530'],
