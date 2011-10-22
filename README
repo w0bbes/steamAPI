@@ -1,1 +1,27 @@
-A module to ease the use of the steamWebAPI.
+Steam web API for node
+
+This documentation needs work. For now read the source code. :/
+
+var steam = require('steam').createClient('yoursteamAPIkey');
+
+steam.getPlayerItems({}, console.log); //Returns a JSON object of Robin Walker's TF2 Backpack.
+
+steam.getPlayerItems({gameid: 540,
+                      steamid: 'A 64 bit steam Id here',
+                      format: 'xml'
+                    }, console.log); //Returns a raw string of the XML data requested for TF2 Beta
+
+Supported methods:
+  getPlayerItems
+  getSchema
+  getNewsForApp
+  getGlobalAchievementPercentagesForApp
+  getPlayerSummaries
+
+  methodName ([Object], [Function]);
+
+Each method is passed an object containing parameters and a callback function. If an empty object is given, the default parameters will be used.
+
+I'll add more to this documentation soon. I need to learn Markdown or something :)
+
+
