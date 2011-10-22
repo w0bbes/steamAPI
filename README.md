@@ -23,6 +23,7 @@ All methods accept an optional object for parameters, and require a callback fun
 
 ### Specify Default Settings
 You can change all of the default settings when initializing the module.
+
     var steam = require('node-steam').createClient({
       format: 'json',
       steamid: '76561197960435530',
