@@ -6,9 +6,11 @@ steamAPI
 A [Steam API Key](http://steamcommunity.com/dev/apikey) is needed to use this module.
 
 To install:
+
     npm install steamAPI
 
 To use:
+
     var steam = require('steamAPI').configure('yourSteamAPIKey');
     
     //Returns a JSON object of Robin Walker's TF2 Backpack
