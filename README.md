@@ -43,6 +43,13 @@ You can change all of the default settings when initializing the module.
 *   getPlayerItems
 *   getSchema
 
+### getPlayerSummaries
+This method uses an array of 64bit Steamids in the query. The Steam Web API limits the request to 100 steamids. node-steam does not error handle this.
+
+    steam.getPlayerSummaries({
+      steamids: ['76561197960435530']
+    }, console.log);
+
 ### Please Note
 By default, all methods will use version 0001. Currently the Steam Web API (non-TF2) methods support version 0002. To use the newest version please specify within the parameter object.
 
