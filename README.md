@@ -1,4 +1,4 @@
-steamWeb
+steamAPI
 ====================
 
 [Steam Web API](http://steamcommunity.com/dev) for node
@@ -7,7 +7,7 @@ A [Steam API Key](http://steamcommunity.com/dev/apikey) is needed to use this mo
 
 Working on getting this into npm.
 
-    var steam = require('steamWeb').configure('yourSteamAPIKey');
+    var steam = require('steamAPI').configure('yourSteamAPIKey');
     
     //Returns a JSON object of Robin Walker's TF2 Backpack
     steam.getPlayerItems(console.log); 
@@ -24,7 +24,7 @@ All methods accept an optional object for parameters, and require a callback fun
 ### Specify Default Settings
 You can change all of the default settings when initializing the module.
 
-    var steam = require('steamWeb').configure({
+    var steam = require('steamAPI').configure({
       format: 'json',
       steamid: '76561197960435530',
       steamids: ['76561197960435530'],
@@ -44,7 +44,7 @@ You can change all of the default settings when initializing the module.
 *   getSchema
 
 ### getPlayerSummaries
-This method uses an array of 64bit Steamids in the query. The Steam Web API limits the request to 100 steamids. steamWeb does not error handle this.
+This method uses an array of 64bit Steamids in the query. The Steam Web API limits the request to 100 steamids.
 
     steam.getPlayerSummaries({
       steamids: ['76561197960435530']

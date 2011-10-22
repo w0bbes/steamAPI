@@ -1,16 +1,17 @@
 {
   "author": "Brian Hassinger <brian.a.hassinger@gmail.com>",
-  "name": "steamWeb",
+  "name": "steamAPI",
   "description": "Steam Web / TF2 API",
-  "version": "0.0.0",
-  "homepage": "https://github.com/brainss/steamWeb",
+  "version": "0.0.1",
+  "homepage": "https://github.com/brainss/steamAPI",
+  "keywords": ["steam", "tf2", "team fortress 2", "portal 2"],
   "repository": {
     "type": "git",
-    "url": "git://github.com/brainss/steamWeb.git"
+    "url": "git://github.com/brainss/steamAPI.git"
   },
   "main": "index",
   "engines": {
-    "node": "~0.5"
+    "node": ">=0.4"
   },
   "dependencies": {},
   "devDependencies": {}
