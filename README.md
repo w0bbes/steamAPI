@@ -5,7 +5,7 @@ steamAPI
 
 A [Steam API Key](http://steamcommunity.com/dev/apikey) is needed to use this module.
 
-Working on getting this into npm.
+    npm install steamAPI
 
     var steam = require('steamAPI').configure('yourSteamAPIKey');
     
@@ -57,5 +57,3 @@ By default, all methods will use version 0001. Currently the Steam Web API (non-
       appid: '440',
       version: '0002'
     }, console.log);
-
-More documentation to come.
