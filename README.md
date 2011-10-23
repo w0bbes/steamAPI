@@ -5,6 +5,8 @@ steamAPI
 
 A [Steam API Key](http://steamcommunity.com/dev/apikey) is needed to use this module.
 
+Please see the [Steam Web API]() and [TF2/Portal2]() wikis for documentation.
+
 To install:
 
     npm install steamAPI
@@ -16,31 +18,34 @@ To use:
     //Returns a JSON object of Robin Walker's TF2 Backpack
     steam.getPlayerItems(console.log); 
 
-All methods accept an optional object for parameters, and require a callback function.
 
-    steam.getPlayerItems({
-      format: 'json',               // default - ['json', 'xml', 'vdf']
-      gameid: '440',                // default - see valve documentation for more gameids
-      steamid: '76561197960435530', // default -  Robin Walker's steam id <3
-      version: '0001'               // default
-    }, console.log);                // function(err, result){}
-
-### Specify Default Settings
-You can change all of the default settings when initializing the module.
+Specify Settings
+--------------------
+Optionally, you can change all of the default settings by passing an object map.
 
     var steam = require('steamAPI').configure({
-      format: 'json',
-      steamid: '76561197960435530',
-      steamids: ['76561197960435530'],
+      format: 'xml',
       gameid: '440',
-      appid: '440',
-      count: '5',
-      language: 'en',
-      maxlength: '300',
-      version: '0001'
+      version: '0002'
     }, 'yourSteamAPIKey');
 
-### Supported methods
+### Available Settings
+These are the default settings.
+
+    {
+      format: 'json',                   // json returns a JSON object all other formats return a string of raw data
+      steamid: '76561197960435530',     // Robin Walker
+      steamids: ['76561197960435530'],  // getPlayerSummaries() uses an Array of steamids
+      gameid: '440',                    // See steam documentation for gameids 
+      appid: '440',                     // See steam documentation for appids 
+      count: '5',                       // Number of entries for getPLayerSummaries
+      language: 'en',                   // See steam documentation for available languages
+      maxlength: '300',                 // Maxlength of something or other
+      version: '0001'                   // For Steam API methods the newest version is 0002
+    }
+
+Supported methods
+-----------------------
 *   getNewsForApp
 *   getGlobalAchievementPercentagesForApp
 *   getPlayerSummaries
