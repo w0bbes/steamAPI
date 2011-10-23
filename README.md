@@ -21,7 +21,6 @@ To use:
     //Returns a JSON object of Robin Walker's TF2 Backpack
     steam.getPlayerItems(console.log); 
 
-
 Specify Settings
 --------------------
 Optionally, you can change all of the default settings by passing an object map to configure();
