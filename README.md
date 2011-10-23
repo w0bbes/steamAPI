@@ -65,7 +65,7 @@ Supported methods
     }, console.log);
 
     //Returns a raw XML string of the default appid (440) which is TF2 using method version 0002
-    getGlobalAchievementPercentagesForApp({
+    steam.getGlobalAchievementPercentagesForApp({
       format: 'xml',
       version: '0002'
     }, console.log);
